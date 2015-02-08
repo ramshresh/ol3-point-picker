@@ -11,6 +11,7 @@
 //
 // Define rotate to north control.
 //
+
     /**
      * @constructor
      * @extends {ol.control.Control}
@@ -23,29 +24,16 @@
 
         this.containerId=options.containerId || 'ol3_pp_container';
         this.latitudeId=options.latitudeId||"ol3_pp_latitude",
-            this.longitudeId=options.longitudeId|| "ol3_pp_longitude",
-            this.addressId=options.addressId|| "ol3_pp_place_name",
-            this.btnOkId=options.btnOkId||'ol3_pp_btn_ok'
+        this.longitudeId=options.longitudeId|| "ol3_pp_longitude",
+        this.addressId=options.addressId|| "ol3_pp_place_name",
+        this.btnOkId=options.btnOkId||'ol3_pp_btn_ok'
 
         this.template=options.template;
         this.templateData=options.templateData;
 
-        /*var ppAddress = document.createElement('input');
-        ppAddress.id='pp_input_address_id';
-        ppAddress.placeholder = 'Address';
-        this.inputAddress=ppAddress;
-        var ppLatitude = document.createElement('input');
-        ppLatitude.id='pp_input_latitude_id';
-        ppLatitude.placeholder = 'Latitude';
-        this.inputLatitude=ppLatitude;
-        var ppLongitude = document.createElement('input');
-        ppLongitude.id='pp_input_longitude_id';
-        ppLongitude.placeholder = 'Longitude';
-        this.inputLongitude=ppLongitude;
-        var btnOk = document.createElement('button');
-        btnOk.id = 'pp_btn_ok_id';
-        btnOk.innerHTML = 'Ok';
-        this.btnOk = btnOk;*/
+        var btnOkHandler=function(e){
+            alert('Ok button clicked!');
+        }
 
    /*     var handlePointPicker = function(e) {
             alert('Ok button clicked!');
